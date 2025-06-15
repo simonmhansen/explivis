@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "T-SNE on Patents",
+  "description": "T-SNE visualisation of patent domain ratios per country in 2020",
+  "mark": "circle",
+  "encoding": {
+      "x": {"field": "x", "type": "quantitative", "title": "x-axis"},
+      "y": {"field": "y", "type": "quantitative", "title": "y-axis"},
+      "color": {"field": "Reference area", "type": "nominal", "legend": null},
+      "tooltip": [
+          {"field": "Reference area", "type": "nominal"},
+          {"field": "cluster", "type": "nominal"}
+      ]
+  }
+}

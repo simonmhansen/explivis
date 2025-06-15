@@ -1,0 +1,9 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Dataset",
+  "data": { "values": [{}] },
+  "layer": [],
+  "usermeta": {
+    "embedOptions": {"actions": false}
+  }
+}

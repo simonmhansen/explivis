@@ -1,0 +1,16 @@
+[
+"use-python-data.py",
+"oecd-dataset.py",
+"oecd-pca.py",
+"oecd-pca-clustering.py",
+"oecd-tsne.py",
+"oecd-tsne-clustering.py",
+"oecd-ratio.py",
+"oecd-ratio-tsne.py",
+"load-from-dataset.py", 
+"iris.py",
+"iris-pca.py",
+"iris-tsne.py",
+"iris-tsne-drt-first.py",
+"iris-metrics.py"
+]

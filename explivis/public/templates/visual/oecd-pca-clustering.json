@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "PCA on Patents with K-means (k = 4)",
+    "description": "PCA visualisation of patent domain ratios per country in 2020",
+    "mark": "circle",
+    "encoding": {
+        "x": {"field": "x", "type": "quantitative", "title": "PCA Component 1"},
+        "y": {"field": "y", "type": "quantitative", "title": "PCA Component 2"},
+        "color": {"field": "cluster", "type": "nominal", "title": "Cluster"},
+        "tooltip": [
+            {"field": "Reference area", "type": "nominal"},
+            {"field": "cluster", "type": "nominal"}
+        ]
+    }
+}

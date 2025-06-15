@@ -1,0 +1,6 @@
+/explivis/node_modules/
+/explivis/test-results/
+/explivis/playwright-report/
+/explivis/blob-report/
+/explivis/playwright/.cache/
+*.csv

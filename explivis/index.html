@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="src/assets/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="./src/Strategies/InitialisePythonHandler.js"></script>
+
+  <script type="module" src="/pyscript/core.js"></script>
+  <link rel="stylesheet" href="/pyscript/core.css">
+  <link rel="stylesheet" href="/src/app.css">
+  <link rel="stylesheet" href="/node_modules/dropzone/dist/dropzone.css">
+  <link rel="stylesheet" href="/node_modules/notyf/notyf.min.css">
+
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <!-- Import Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+  <title>ExpliVis</title>
+</head>
+
+<body>
+  <py-config>
+    packages = ["scikit-learn", "altair", "vega_datasets"]
+  </py-config>
+
+  <!-- Credits to https://pyscript.recipes/2024.4.1/terminal/terminal-attribute/ -->
+  <script id="py-terminal" type="py" terminal>    
+  </script>
+  <py-script>
+import sys
+
+# Get a pointer to browser console
+browser_stderr = sys.stderr
+
+# A terminal writer, which writes to both browser console and py-terminal
+class DualWriter:
+  def write(self, message):
+    # Write to py-terminal
+    print(message, end='')
+
+    # Write to browser console
+    browser_stderr.write(message)
+  
+  def flush(self):
+    pass
+
+sys.stderr = DualWriter()
+  </py-script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+
+  <script src="../node_modules/lodash/lodash.js"></script>
+  <script src="../node_modules/dropzone/dist/dropzone-min.js"></script>
+  <script src="../node_modules/flyonui/flyonui.js"></script>
+  <script src="../node_modules/notyf/notyf.min.js"></script>
+</body>
+
+</html>

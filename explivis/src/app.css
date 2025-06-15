@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "flyonui/src/vendor/notyf.css";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+/* Copied directly from SvelteFlow's own input nodes */
+.svelte-flow__node-chartNode {
+  padding: 10px;
+  border-radius: var(--xy-node-border-radius, var(--xy-node-border-radius-default));
+  font-size: 12px;
+  color: var(--xy-node-color, var(--xy-node-color-default));
+  text-align: center;
+  border: var(--xy-node-border, var(--xy-node-border-default));
+  background-color: var(--xy-node-background-color, var(--xy-node-background-color-default));
+}
+
+
+.svelte-flow__node-chartNode.selectable:hover, .svelte-flow__node-default.selectable:hover, .svelte-flow__node-output.selectable:hover, .svelte-flow__node-group.selectable:hover {
+  box-shadow: var(--xy-node-boxshadow-hover, var(--xy-node-boxshadow-hover-default));
+}
+
+
+.svelte-flow__node-chartNode.selectable.selected,
+    .svelte-flow__node-chartNode.selectable:focus,
+    .svelte-flow__node-chartNode.selectable:focus-visible {
+      box-shadow: 0 0 0 1.25px #1a192b;
+}
+
+.notyf__wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.notyf__toast {
+  border-radius: 8px
+}
+
+.notyf__icon {
+  background-color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.xterm {
+}
+
+.xterm-viewport {
+  z-index: 100;
+}
+
+.xterm-screen {
+  z-index: 100;
+}
+
+py-terminal {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.custom-alert-icon {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
